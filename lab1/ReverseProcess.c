@@ -39,7 +39,7 @@ typedef struct {
 
 
 int main() {
-    FILE* file = fopen("E:/myLab/PicProcessLib/pic/GrayRGB.bmp", "rb");
+    FILE* file = fopen("E:/myLab/PicProcessLib/lab1/ProcessedPic/GrayRGB.bmp", "rb");
     if (!file) {
         printf("Failed to open file\n");
         return 1;
