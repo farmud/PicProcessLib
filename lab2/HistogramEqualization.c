@@ -39,8 +39,7 @@ typedef struct {
 
 int main()
 {
-    //FILE* file = fopen("E:/myLab/PicProcessLib/pic/dim.bmp", "rb");
-    FILE* file = fopen("E:/myLab/PicProcessLib/lab2/ProcessedPic/Equalization.bmp", "rb");
+    FILE* file = fopen("E:/myLab/PicProcessLib/pic/dim.bmp", "rb");
     if (!file) {
         printf("Failed to open file\n");
         return 1;
@@ -60,7 +59,7 @@ int main()
     unsigned char* imageData = (unsigned char*)malloc(rowSize * infoHeader.biHeight);   // 图像数据
     fread(imageData, rowSize * infoHeader.biHeight, 1, file);                           // 读取图像数据
 
-    int max = 0;            // 存储出现的像素数量的最大值，用于normalization
+    int max = 0;                // 存储出现的像素数量的最大值，用于normalization
 
     int* histogram = (int*)malloc(sizeof(int) * 256);    // 直方图,下标为对应的像素值，值为出现的次数
     for (int i = 0; i < 256; i++) {
@@ -69,77 +68,49 @@ int main()
 
     for(int i = 0; i < rowSize * infoHeader.biHeight; i++) {
         histogram[imageData[i]]++;
-        if (histogram[imageData[i]] > max) {
-            max = histogram[imageData[i]];
-        }
     }
 
-    double rate = 200.0 / max;  // normalization的比例
+    // 储存每个像素值出现的概率
+    double rate[256] = {0};
+    for(int i = 0;i< 256;i++){
+        rate[i] = histogram[i] *1.0 / (rowSize * infoHeader.biHeight);
+    }
 
-    // 归一化
-    for(int i = 0; i < 256; i++) {
-        histogram[i] = (int)(histogram[i] * rate);
+    // 储存每个像素值的累计概率
+    double sum[256] = {0};
+    sum[0] = rate[0];
+    for(int i = 1;i< 256;i++){
+        sum[i] = sum[i-1] + rate[i];
+    }
+
+    // 储存每个像素值的新值
+    int newPixel[256] = {0};
+    for(int i = 0;i< 256;i++){
+        newPixel[i] = (int)(sum[i] * 255);
+    }
+
+    // 生成新的图像数据
+    unsigned char* newImageData = (unsigned char*)malloc(rowSize * infoHeader.biHeight);
+    for(int i = 0;i< rowSize * infoHeader.biHeight;i++){
+        newImageData[i] = newPixel[imageData[i]];
     }
 
 
-    unsigned char temp [200][256];  // 用于存储直方图
-
-    // 初始化成全白色
-    for(int i = 0; i< 256;i++){
-        for(int j = 0;j<200;j++){
-            temp[j][i] = 255;
-        }
-    }
-
-    for(int i = 0; i < 256; i++) {
-        for(int j = 0; j < histogram[i]; j++) {
-            temp[j][i] = 0;
-        }
-    }
-    unsigned char histogramData[200 * 256];  // 直方图数据
-    for(int i = 0; i < 200; i++) {
-        for(int j = 0; j < 256; j++) {
-            histogramData[i * 256 + j] = temp[i][j];
-        }
-    }
-    BITMAPFILEHEADER histogramFileHeader;
-    BITMAPINFOHEADER histogramInfoHeader;
-
-    // 直方图文件头
-    histogramFileHeader.bfType[0] = 'B';
-    histogramFileHeader.bfType[1] = 'M';
-    histogramFileHeader.bfsize = 200 * 256 + 14 + 40 + 1024;
-    histogramFileHeader.bfReserved = 0;
-    histogramFileHeader.bfOffBits = 14 + 40 + 1024;
-
-    // 直方图信息头
-    histogramInfoHeader.biSize = 40;
-    histogramInfoHeader.biWidth = 256;
-    histogramInfoHeader.biHeight = 200;
-    histogramInfoHeader.biPlanes = 1;
-    histogramInfoHeader.biBitCount = 8;
-    histogramInfoHeader.biCompression = infoHeader.biCompression;
-    histogramInfoHeader.biSizeImage = 200 * 256;
-    histogramInfoHeader.biXPixelsPerMeter = infoHeader.biXPixelsPerMeter;
-    histogramInfoHeader.biYPixelsPerMeter = infoHeader.biYPixelsPerMeter;
-    histogramInfoHeader.biCirsUsed = 0;
-    histogramInfoHeader.biClrImportant = 0;
-
-    // 保存直方图文件
-    //char savePath[]="E:/myLab/PicProcessLib/lab2/ProcessedPic/Histogram.bmp";
-    char savePath[]="E:/myLab/PicProcessLib/lab2/ProcessedPic/NewHistogram.bmp";
+    // 保存灰度图片
+     char savePath[]="E:/myLab/PicProcessLib/lab2/ProcessedPic/Equalization.bmp";
     FILE *f=fopen(savePath,"wb");
     if(f==NULL){
     perror("can not open file!");
     return -2;
     }
-    fwrite(&histogramFileHeader,sizeof(histogramFileHeader),1,f);
-    fwrite(&histogramInfoHeader,sizeof(histogramInfoHeader),1,f);
+    fwrite(&fileHeader,sizeof(fileHeader),1,f);
+    fwrite(&infoHeader,sizeof(infoHeader),1,f);
     fwrite(rgbquad,1024,1,f);
-    fwrite(histogramData,200 * 256,1,f);
+    fwrite(newImageData,sizeof(unsigned char)*infoHeader.biSizeImage,1,f);
     fclose(f);
-
+    free(imageData);
     fclose(file);
+    free(newImageData);
 
-    
+
 }
