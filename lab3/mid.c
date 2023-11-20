@@ -37,9 +37,32 @@ typedef struct {
 
 #pragma pack(pop)
 
+int midPooling(unsigned char ** tempData,int i,int j){
+    int arr[9];
+    arr[0] = tempData[i-1][j-1];
+    arr[1] = tempData[i-1][j];
+    arr[2] = tempData[i-1][j+1];
+    arr[3] = tempData[i][j-1];
+    arr[4] = tempData[i][j];
+    arr[5] = tempData[i][j+1];
+    arr[6] = tempData[i+1][j-1];
+    arr[7] = tempData[i+1][j];
+    arr[8] = tempData[i+1][j+1];
+    for(int i = 0;i < 9;i ++){
+        for(int j = 0;j < 9 - i - 1;j ++){
+            if(arr[j] > arr[j+1]){
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    return arr[4];
+}
+
 int main()
 {
-    FILE* file = fopen("E:/myLab/PicProcessLib/pic/dim.bmp", "rb");
+    FILE* file = fopen("E:/myLab/PicProcessLib/pic/noise.bmp", "rb");
     if (!file) {
         printf("Failed to open file\n");
         return 1;
@@ -114,25 +137,4 @@ int main()
 
 }
 
-int midPooling(unsigned char ** tempData,int i,int j){
-    int arr[9];
-    arr[0] = tempData[i-1][j-1];
-    arr[1] = tempData[i-1][j];
-    arr[2] = tempData[i-1][j+1];
-    arr[3] = tempData[i][j-1];
-    arr[4] = tempData[i][j];
-    arr[5] = tempData[i][j+1];
-    arr[6] = tempData[i+1][j-1];
-    arr[7] = tempData[i+1][j];
-    arr[8] = tempData[i+1][j+1];
-    for(int i = 0;i < 9;i ++){
-        for(int j = 0;j < 9 - i - 1;j ++){
-            if(arr[j] > arr[j+1]){
-                int temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
-            }
-        }
-    }
-    return arr[4];
-}
+
