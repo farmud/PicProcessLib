@@ -1,0 +1,19 @@
+# ninja log v5
+19	202	7221495013996936	CMakeFiles/PicProcessLib.dir/lab1/ReverseProcess.c.obj	5ac67085034604b9
+1	203	7221495013996936	CMakeFiles/PicProcessLib.dir/lab1/GrayProcess.c.obj	effc39947ff12ff0
+110	265	7221495014648836	CMakeFiles/PicProcessLib.dir/lab3/mid.c.obj	b5b2277c836caffd
+91	254	7221495014546920	CMakeFiles/PicProcessLib.dir/lab3/avag.c.obj	c005d6cba17b197a
+36	213	7221495014126894	CMakeFiles/PicProcessLib.dir/lab1/RGBDepartureProcess.c.obj	9945620be5221950
+54	226	7221495014256903	CMakeFiles/PicProcessLib.dir/lab2/HistogramEqualization.c.obj	ec973746a860ef1b
+73	244	7221495014436898	CMakeFiles/PicProcessLib.dir/lab2/MakeHistogram.c.obj	30aedaf55b54aecd
+0	248	7221505315030520	build.ninja	a5fe330d6e49f78e
+0	140	7221505434144970	CMakeFiles/GrayProcess.dir/lab1/GrayProcess.c.obj	2d9ef4075f6e35ea
+142	364	7221505436354577	GrayProcess.exe	92f8550d12b3920c
+1	146	7221506404152593	CMakeFiles/mid.dir/lab3/mid.c.obj	63daffdf9ed7c452
+147	378	7221506406422633	mid.exe	df34db4bcf3efb27
+2	134	7221506733134316	CMakeFiles/mid.dir/lab3/mid.c.obj	63daffdf9ed7c452
+134	368	7221506735441979	mid.exe	df34db4bcf3efb27
+2	147	7221507710630578	CMakeFiles/GrayProcess.dir/lab1/GrayProcess.c.obj	2d9ef4075f6e35ea
+148	371	7221507712848832	GrayProcess.exe	92f8550d12b3920c
+3	149	7221508123327955	CMakeFiles/mid.dir/lab3/mid.c.obj	63daffdf9ed7c452
+150	376	7221508125559793	mid.exe	df34db4bcf3efb27

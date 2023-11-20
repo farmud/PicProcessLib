@@ -1,0 +1,9 @@
+E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/GrayProcess.dir
+E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/ReverseProcess.dir
+E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/RGBDepartureProcess.dir
+E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/HistogramEqualization.dir
+E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/MakeHistogram.dir
+E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/avag.dir
+E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/mid.dir
+E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/rebuild_cache.dir
