@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -37,9 +38,9 @@ typedef struct {
 
 #pragma pack(pop)
 
-
-int main() {
-    FILE* file = fopen("../lab1/ProcessedPic/GrayRGB.bmp", "rb");
+int main()
+{
+    FILE* file = fopen("../pic/lena.bmp", "rb");
     if (!file) {
         printf("Failed to open file\n");
         return 1;
@@ -53,36 +54,41 @@ int main() {
     fread(&infoHeader, sizeof(infoHeader), 1, file);    // 读取信息头
 
     int rowSize = ((infoHeader.biWidth * infoHeader.biBitCount + 31) / 32) * 4;         // 每行像素所占字节数
-    unsigned char* imageData = (unsigned char*)malloc(rowSize * infoHeader.biHeight);   // 图像数据
 
     fread(rgbquad, 1024, 1, file);                                                      // 读取调色板
+
+    unsigned char* imageData = (unsigned char*)malloc(rowSize * infoHeader.biHeight);   // 图像数据
     fread(imageData, rowSize * infoHeader.biHeight, 1, file);                           // 读取图像数据
 
+    const int dx = 100, dy = 100; // 平移距离
+    unsigned char *newImageData = (unsigned char*)malloc(rowSize * infoHeader.biHeight);
 
-    // 反色
-    for (int i = 0; i < rowSize * infoHeader.biHeight; i++) {
-        imageData[i] = 255 - imageData[i];
+    for(int i = 0; i< infoHeader.biHeight ; i ++) {
+        for(int j = 0; j < rowSize ; j ++ ) {
+            int index = (i - dx) * rowSize + (j - dy );
+            if(index >= 0 && index < rowSize * infoHeader.biHeight && i >= dy && j >= dx) {
+                newImageData[i * rowSize + j] = imageData[index];
+            }
+            else newImageData[i * rowSize + j] = 255;
+        }
     }
 
-    // 保存反色图文件
-    char savePath[]="../lab1/ProcessedPic/ReverseRGB.bmp";
+
+
+    // 写入文件
+    char savePath[]="../lab4/ProcessedPic/translate.bmp";
     FILE *f=fopen(savePath,"wb");
     if(f==NULL){
-    perror("can not open file!");
-    return -2;
+        perror("can not open file!");
+        return -2;
     }
-
     fwrite(&fileHeader,sizeof(fileHeader),1,f);
     fwrite(&infoHeader,sizeof(infoHeader),1,f);
     fwrite(rgbquad,1024,1,f);
-    fwrite(imageData,sizeof(unsigned char)*infoHeader.biSizeImage,1,f);
+    fwrite(newImageData,sizeof(unsigned char)*infoHeader.biSizeImage,1,f);
     fclose(f);
-    
-
-
-
     free(imageData);
     fclose(file);
-
-    return 0;
+    free(newImageData);
 }
+

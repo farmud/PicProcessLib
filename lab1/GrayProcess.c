@@ -39,7 +39,7 @@ typedef struct {
 
 
 int main() {
-    FILE* file = fopen("E:/myLab/PicProcessLib/pic/rgb.bmp", "rb");
+    FILE* file = fopen("../pic/rgb.bmp", "rb");
     if (!file) {
         printf("Failed to open file\n");
         return 1;
@@ -88,7 +88,7 @@ int main() {
 
 
     // 保存灰度图文件
-    char savePath[]="E:/myLab/PicProcessLib/lab1/ProcessedPic/GrayRGB.bmp";
+    char savePath[]="../lab1/ProcessedPic/GrayRGB.bmp";
     FILE *f=fopen(savePath,"wb");
     if(f==NULL){
     perror("can not open file!");

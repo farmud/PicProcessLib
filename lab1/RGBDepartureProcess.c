@@ -39,7 +39,7 @@ typedef struct {
 
 
 int main() {
-    FILE* file = fopen("E:/myLab/PicProcessLib/pic/rgb.bmp", "rb");
+    FILE* file = fopen("../pic/rgb.bmp", "rb");
     if (!file) {
         printf("Failed to open file\n");
         return 1;
@@ -91,7 +91,7 @@ int main() {
 
 
     // 保存B通道文件
-    char savePath1[]="E:/myLab/PicProcessLib/lab1/ProcessedPic/departure/B.bmp";
+    char savePath1[]="../lab1/ProcessedPic/departure/B.bmp";
     FILE *f1=fopen(savePath1,"wb");
     if(f1==NULL){
     perror("can not open file!");
@@ -103,7 +103,7 @@ int main() {
     fwrite(BImageData,sizeof(unsigned char)*infoHeader.biSizeImage,1,f1);
 
     // 保存G通道文件
-    char savePath2[]="E:/myLab/PicProcessLib/lab1/ProcessedPic/departure/G.bmp";
+    char savePath2[]="../lab1/ProcessedPic/departure/G.bmp";
     FILE *f2=fopen(savePath2,"wb");
     if(f2==NULL){
     perror("can not open file!");
@@ -115,7 +115,7 @@ int main() {
     fwrite(GImageData,sizeof(unsigned char)*infoHeader.biSizeImage,1,f2);
 
     // 保存R通道文件
-    char savePath3[]="E:/myLab/PicProcessLib/lab1/ProcessedPic/departure/R.bmp";
+    char savePath3[]="../lab1/ProcessedPic/departure/R.bmp";
     FILE *f3=fopen(savePath3,"wb");
     if(f3==NULL){
     perror("can not open file!");

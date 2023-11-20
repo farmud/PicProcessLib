@@ -39,8 +39,8 @@ typedef struct {
 
 int main()
 {
-    //FILE* file = fopen("E:/myLab/PicProcessLib/pic/dim.bmp", "rb");
-    FILE* file = fopen("E:/myLab/PicProcessLib/lab2/ProcessedPic/Equalization.bmp", "rb");
+    //FILE* file = fopen("../pic/dim.bmp", "rb");
+    FILE* file = fopen("../lab2/ProcessedPic/Equalization.bmp", "rb");
     if (!file) {
         printf("Failed to open file\n");
         return 1;
@@ -126,8 +126,8 @@ int main()
     histogramInfoHeader.biClrImportant = 0;
 
     // 保存直方图文件
-    //char savePath[]="E:/myLab/PicProcessLib/lab2/ProcessedPic/Histogram.bmp";
-    char savePath[]="E:/myLab/PicProcessLib/lab2/ProcessedPic/NewHistogram.bmp";
+    //char savePath[]="../lab2/ProcessedPic/Histogram.bmp";
+    char savePath[]="../lab2/ProcessedPic/NewHistogram.bmp";
     FILE *f=fopen(savePath,"wb");
     if(f==NULL){
     perror("can not open file!");

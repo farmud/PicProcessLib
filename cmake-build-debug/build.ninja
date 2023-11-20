@@ -220,6 +220,12 @@ build CMakeFiles/avag.dir/lab3/avag.c.obj: C_COMPILER__avag_unscanned_Debug E$:/
   OBJECT_DIR = CMakeFiles\avag.dir
   OBJECT_FILE_DIR = CMakeFiles\avag.dir\lab3
 
+build CMakeFiles/avag.dir/lab4/shrink.c.obj: C_COMPILER__avag_unscanned_Debug E$:/myLab/PicProcessLib/lab4/shrink.c || cmake_object_order_depends_target_avag
+  DEP_FILE = CMakeFiles\avag.dir\lab4\shrink.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\avag.dir
+  OBJECT_FILE_DIR = CMakeFiles\avag.dir\lab4
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target avag
@@ -228,7 +234,7 @@ build CMakeFiles/avag.dir/lab3/avag.c.obj: C_COMPILER__avag_unscanned_Debug E$:/
 #############################################
 # Link the executable avag.exe
 
-build avag.exe: C_EXECUTABLE_LINKER__avag_Debug CMakeFiles/avag.dir/lab3/avag.c.obj
+build avag.exe: C_EXECUTABLE_LINKER__avag_Debug CMakeFiles/avag.dir/lab3/avag.c.obj CMakeFiles/avag.dir/lab4/shrink.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\avag.dir
@@ -271,6 +277,138 @@ build mid.exe: C_EXECUTABLE_LINKER__mid_Debug CMakeFiles/mid.dir/lab3/mid.c.obj
   TARGET_IMPLIB = libmid.dll.a
   TARGET_PDB = mid.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target shrink
+
+
+#############################################
+# Order-only phony target for shrink
+
+build cmake_object_order_depends_target_shrink: phony || CMakeFiles/shrink.dir
+
+build CMakeFiles/shrink.dir/lab4/shrink.c.obj: C_COMPILER__shrink_unscanned_Debug E$:/myLab/PicProcessLib/lab4/shrink.c || cmake_object_order_depends_target_shrink
+  DEP_FILE = CMakeFiles\shrink.dir\lab4\shrink.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\shrink.dir
+  OBJECT_FILE_DIR = CMakeFiles\shrink.dir\lab4
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target shrink
+
+
+#############################################
+# Link the executable shrink.exe
+
+build shrink.exe: C_EXECUTABLE_LINKER__shrink_Debug CMakeFiles/shrink.dir/lab4/shrink.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\shrink.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = shrink.exe
+  TARGET_IMPLIB = libshrink.dll.a
+  TARGET_PDB = shrink.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target translate
+
+
+#############################################
+# Order-only phony target for translate
+
+build cmake_object_order_depends_target_translate: phony || CMakeFiles/translate.dir
+
+build CMakeFiles/translate.dir/lab4/translate.c.obj: C_COMPILER__translate_unscanned_Debug E$:/myLab/PicProcessLib/lab4/translate.c || cmake_object_order_depends_target_translate
+  DEP_FILE = CMakeFiles\translate.dir\lab4\translate.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\translate.dir
+  OBJECT_FILE_DIR = CMakeFiles\translate.dir\lab4
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target translate
+
+
+#############################################
+# Link the executable translate.exe
+
+build translate.exe: C_EXECUTABLE_LINKER__translate_Debug CMakeFiles/translate.dir/lab4/translate.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\translate.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = translate.exe
+  TARGET_IMPLIB = libtranslate.dll.a
+  TARGET_PDB = translate.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target mirror
+
+
+#############################################
+# Order-only phony target for mirror
+
+build cmake_object_order_depends_target_mirror: phony || CMakeFiles/mirror.dir
+
+build CMakeFiles/mirror.dir/lab4/mirror.c.obj: C_COMPILER__mirror_unscanned_Debug E$:/myLab/PicProcessLib/lab4/mirror.c || cmake_object_order_depends_target_mirror
+  DEP_FILE = CMakeFiles\mirror.dir\lab4\mirror.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\mirror.dir
+  OBJECT_FILE_DIR = CMakeFiles\mirror.dir\lab4
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target mirror
+
+
+#############################################
+# Link the executable mirror.exe
+
+build mirror.exe: C_EXECUTABLE_LINKER__mirror_Debug CMakeFiles/mirror.dir/lab4/mirror.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\mirror.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = mirror.exe
+  TARGET_IMPLIB = libmirror.dll.a
+  TARGET_PDB = mirror.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target revolve
+
+
+#############################################
+# Order-only phony target for revolve
+
+build cmake_object_order_depends_target_revolve: phony || CMakeFiles/revolve.dir
+
+build CMakeFiles/revolve.dir/lab4/revolve.c.obj: C_COMPILER__revolve_unscanned_Debug E$:/myLab/PicProcessLib/lab4/revolve.c || cmake_object_order_depends_target_revolve
+  DEP_FILE = CMakeFiles\revolve.dir\lab4\revolve.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\revolve.dir
+  OBJECT_FILE_DIR = CMakeFiles\revolve.dir\lab4
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target revolve
+
+
+#############################################
+# Link the executable revolve.exe
+
+build revolve.exe: C_EXECUTABLE_LINKER__revolve_Debug CMakeFiles/revolve.dir/lab4/revolve.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\revolve.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = revolve.exe
+  TARGET_IMPLIB = librevolve.dll.a
+  TARGET_PDB = revolve.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -311,6 +449,14 @@ build avag: phony avag.exe
 
 build mid: phony mid.exe
 
+build mirror: phony mirror.exe
+
+build revolve: phony revolve.exe
+
+build shrink: phony shrink.exe
+
+build translate: phony translate.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -319,7 +465,7 @@ build mid: phony mid.exe
 #############################################
 # Folder: E:/myLab/PicProcessLib/cmake-build-debug
 
-build all: phony GrayProcess.exe ReverseProcess.exe RGBDepartureProcess.exe HistogramEqualization.exe MakeHistogram.exe avag.exe mid.exe
+build all: phony GrayProcess.exe ReverseProcess.exe RGBDepartureProcess.exe HistogramEqualization.exe MakeHistogram.exe avag.exe mid.exe shrink.exe translate.exe mirror.exe revolve.exe
 
 # =============================================================================
 # Built-in targets

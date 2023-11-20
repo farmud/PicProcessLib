@@ -62,7 +62,7 @@ int midPooling(unsigned char ** tempData,int i,int j){
 
 int main()
 {
-    FILE* file = fopen("E:/myLab/PicProcessLib/pic/noise.bmp", "rb");
+    FILE* file = fopen("../pic/noise.bmp", "rb");
     if (!file) {
         printf("Failed to open file\n");
         return 1;
@@ -119,7 +119,7 @@ int main()
     }
 
   
-    char savePath[]="E:/myLab/PicProcessLib/lab3/ProcessedPic/mid.bmp";
+    char savePath[]="../lab3/ProcessedPic/mid.bmp";
     FILE *f=fopen(savePath,"wb");
     if(f==NULL){
     perror("can not open file!");

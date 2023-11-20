@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -37,9 +38,9 @@ typedef struct {
 
 #pragma pack(pop)
 
-
-int main() {
-    FILE* file = fopen("../lab1/ProcessedPic/GrayRGB.bmp", "rb");
+int main()
+{
+    FILE* file = fopen("../pic/lena.bmp", "rb");
     if (!file) {
         printf("Failed to open file\n");
         return 1;
@@ -53,36 +54,47 @@ int main() {
     fread(&infoHeader, sizeof(infoHeader), 1, file);    // 读取信息头
 
     int rowSize = ((infoHeader.biWidth * infoHeader.biBitCount + 31) / 32) * 4;         // 每行像素所占字节数
-    unsigned char* imageData = (unsigned char*)malloc(rowSize * infoHeader.biHeight);   // 图像数据
 
     fread(rgbquad, 1024, 1, file);                                                      // 读取调色板
+
+    unsigned char* imageData = (unsigned char*)malloc(rowSize * infoHeader.biHeight);   // 图像数据
     fread(imageData, rowSize * infoHeader.biHeight, 1, file);                           // 读取图像数据
 
+    unsigned char *newImageData1 = (unsigned char*)malloc(rowSize * infoHeader.biHeight);
+    unsigned char *newImageData2 = (unsigned char*)malloc(rowSize * infoHeader.biHeight);
 
-    // 反色
-    for (int i = 0; i < rowSize * infoHeader.biHeight; i++) {
-        imageData[i] = 255 - imageData[i];
+    for(int i = 0; i< infoHeader.biHeight ; i ++) {
+        for(int j = 0; j < rowSize ; j ++ ) {
+            newImageData1[i*rowSize+j]=imageData[i*rowSize+rowSize-j-1];
+            newImageData2[i*rowSize+j]=imageData[(infoHeader.biHeight-i-1)*rowSize+j];
+        }
     }
 
-    // 保存反色图文件
-    char savePath[]="../lab1/ProcessedPic/ReverseRGB.bmp";
-    FILE *f=fopen(savePath,"wb");
-    if(f==NULL){
-    perror("can not open file!");
-    return -2;
+
+
+    // 写入文件
+    char savePath1[]="../lab4/ProcessedPic/mirror1.bmp";
+    char savePath2[]="../lab4/ProcessedPic/mirror2.bmp";
+    FILE *f1=fopen(savePath1,"wb");
+    FILE *f2=fopen(savePath2,"wb");
+    if(f1==NULL || f2 == NULL){
+        perror("can not open file!");
+        return -2;
     }
+    fwrite(&fileHeader,sizeof(fileHeader),1,f1);
+    fwrite(&infoHeader,sizeof(infoHeader),1,f1);
+    fwrite(rgbquad,1024,1,f1);
+    fwrite(newImageData1,sizeof(unsigned char)*infoHeader.biSizeImage,1,f1);
+    fwrite(&fileHeader,sizeof(fileHeader),1,f2);
+    fwrite(&infoHeader,sizeof(infoHeader),1,f2);
+    fwrite(rgbquad,1024,1,f2);
+    fwrite(newImageData2,sizeof(unsigned char)*infoHeader.biSizeImage,1,f2);
 
-    fwrite(&fileHeader,sizeof(fileHeader),1,f);
-    fwrite(&infoHeader,sizeof(infoHeader),1,f);
-    fwrite(rgbquad,1024,1,f);
-    fwrite(imageData,sizeof(unsigned char)*infoHeader.biSizeImage,1,f);
-    fclose(f);
-    
-
-
-
+    fclose(f1);
+    fclose(f2);
     free(imageData);
     fclose(file);
-
-    return 0;
+    free(newImageData1);
+    free(newImageData2);
 }
+

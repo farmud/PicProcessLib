@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -37,9 +38,9 @@ typedef struct {
 
 #pragma pack(pop)
 
-
-int main() {
-    FILE* file = fopen("../lab1/ProcessedPic/GrayRGB.bmp", "rb");
+int main()
+{
+    FILE* file = fopen("../pic/lena.bmp", "rb");
     if (!file) {
         printf("Failed to open file\n");
         return 1;
@@ -53,36 +54,65 @@ int main() {
     fread(&infoHeader, sizeof(infoHeader), 1, file);    // 读取信息头
 
     int rowSize = ((infoHeader.biWidth * infoHeader.biBitCount + 31) / 32) * 4;         // 每行像素所占字节数
-    unsigned char* imageData = (unsigned char*)malloc(rowSize * infoHeader.biHeight);   // 图像数据
 
     fread(rgbquad, 1024, 1, file);                                                      // 读取调色板
+
+    unsigned char* imageData = (unsigned char*)malloc(rowSize * infoHeader.biHeight);   // 图像数据
     fread(imageData, rowSize * infoHeader.biHeight, 1, file);                           // 读取图像数据
 
+    const float rate = 2; // 缩小倍数
 
-    // 反色
-    for (int i = 0; i < rowSize * infoHeader.biHeight; i++) {
-        imageData[i] = 255 - imageData[i];
+    int newWidth = infoHeader.biWidth / rate;
+    int newHeight = infoHeader.biHeight / rate;
+
+    unsigned char* newImageData = (unsigned char*)malloc(newWidth*newHeight);   // 用于处理的图像数据
+
+    for(int i = 0;i < newHeight;i ++){
+        for(int j = 0;j < newWidth;j ++){
+            newImageData[i*newWidth+j] = imageData[(int)(i*rate*rowSize+j*rate)];
+        }
     }
 
-    // 保存反色图文件
-    char savePath[]="../lab1/ProcessedPic/ReverseRGB.bmp";
+
+
+    BITMAPFILEHEADER newFileHeader;
+    BITMAPINFOHEADER newInfoHeader;
+    // 写入文件头
+    newFileHeader.bfType[0] = 'B';
+    newFileHeader.bfType[1] = 'M';
+    newFileHeader.bfsize = 54 + 1024 + newWidth * newHeight;
+    newFileHeader.bfReserved = 0;
+    newFileHeader.bfOffBits = 54 + 1024;
+    // 写入信息头
+    newInfoHeader.biSize = 40;
+    newInfoHeader.biWidth = newWidth;
+    newInfoHeader.biHeight = newHeight;
+    newInfoHeader.biPlanes = 1;
+    newInfoHeader.biBitCount = 8;
+    newInfoHeader.biCompression = 0;
+    newInfoHeader.biSizeImage = newWidth * newHeight;
+    newInfoHeader.biXPixelsPerMeter = 0;
+    newInfoHeader.biYPixelsPerMeter = 0;
+    newInfoHeader.biCirsUsed = 0;
+    newInfoHeader.biClrImportant = 0;
+
+
+
+    // 写入文件
+    char savePath[]="../lab4/ProcessedPic/shrink.bmp";
     FILE *f=fopen(savePath,"wb");
     if(f==NULL){
-    perror("can not open file!");
-    return -2;
+        perror("can not open file!");
+        return -2;
     }
-
-    fwrite(&fileHeader,sizeof(fileHeader),1,f);
-    fwrite(&infoHeader,sizeof(infoHeader),1,f);
+    fwrite(&newFileHeader,sizeof(newFileHeader),1,f);
+    fwrite(&newInfoHeader,sizeof(newInfoHeader),1,f);
     fwrite(rgbquad,1024,1,f);
-    fwrite(imageData,sizeof(unsigned char)*infoHeader.biSizeImage,1,f);
+    fwrite(newImageData,sizeof(unsigned char)*newInfoHeader.biSizeImage,1,f);
     fclose(f);
-    
-
-
-
     free(imageData);
     fclose(file);
+    free(newImageData);
 
-    return 0;
+
 }
