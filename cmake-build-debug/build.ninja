@@ -220,12 +220,6 @@ build CMakeFiles/avag.dir/lab3/avag.c.obj: C_COMPILER__avag_unscanned_Debug E$:/
   OBJECT_DIR = CMakeFiles\avag.dir
   OBJECT_FILE_DIR = CMakeFiles\avag.dir\lab3
 
-build CMakeFiles/avag.dir/lab4/shrink.c.obj: C_COMPILER__avag_unscanned_Debug E$:/myLab/PicProcessLib/lab4/shrink.c || cmake_object_order_depends_target_avag
-  DEP_FILE = CMakeFiles\avag.dir\lab4\shrink.c.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\avag.dir
-  OBJECT_FILE_DIR = CMakeFiles\avag.dir\lab4
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target avag
@@ -234,7 +228,7 @@ build CMakeFiles/avag.dir/lab4/shrink.c.obj: C_COMPILER__avag_unscanned_Debug E$
 #############################################
 # Link the executable avag.exe
 
-build avag.exe: C_EXECUTABLE_LINKER__avag_Debug CMakeFiles/avag.dir/lab3/avag.c.obj CMakeFiles/avag.dir/lab4/shrink.c.obj
+build avag.exe: C_EXECUTABLE_LINKER__avag_Debug CMakeFiles/avag.dir/lab3/avag.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\avag.dir
@@ -409,6 +403,72 @@ build revolve.exe: C_EXECUTABLE_LINKER__revolve_Debug CMakeFiles/revolve.dir/lab
   TARGET_IMPLIB = librevolve.dll.a
   TARGET_PDB = revolve.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target prewitt
+
+
+#############################################
+# Order-only phony target for prewitt
+
+build cmake_object_order_depends_target_prewitt: phony || CMakeFiles/prewitt.dir
+
+build CMakeFiles/prewitt.dir/lab7/prewitt.c.obj: C_COMPILER__prewitt_unscanned_Debug E$:/myLab/PicProcessLib/lab7/prewitt.c || cmake_object_order_depends_target_prewitt
+  DEP_FILE = CMakeFiles\prewitt.dir\lab7\prewitt.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\prewitt.dir
+  OBJECT_FILE_DIR = CMakeFiles\prewitt.dir\lab7
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target prewitt
+
+
+#############################################
+# Link the executable prewitt.exe
+
+build prewitt.exe: C_EXECUTABLE_LINKER__prewitt_Debug CMakeFiles/prewitt.dir/lab7/prewitt.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\prewitt.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = prewitt.exe
+  TARGET_IMPLIB = libprewitt.dll.a
+  TARGET_PDB = prewitt.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target sobel
+
+
+#############################################
+# Order-only phony target for sobel
+
+build cmake_object_order_depends_target_sobel: phony || CMakeFiles/sobel.dir
+
+build CMakeFiles/sobel.dir/lab7/sobel.c.obj: C_COMPILER__sobel_unscanned_Debug E$:/myLab/PicProcessLib/lab7/sobel.c || cmake_object_order_depends_target_sobel
+  DEP_FILE = CMakeFiles\sobel.dir\lab7\sobel.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\sobel.dir
+  OBJECT_FILE_DIR = CMakeFiles\sobel.dir\lab7
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target sobel
+
+
+#############################################
+# Link the executable sobel.exe
+
+build sobel.exe: C_EXECUTABLE_LINKER__sobel_Debug CMakeFiles/sobel.dir/lab7/sobel.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\sobel.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = sobel.exe
+  TARGET_IMPLIB = libsobel.dll.a
+  TARGET_PDB = sobel.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -451,9 +511,13 @@ build mid: phony mid.exe
 
 build mirror: phony mirror.exe
 
+build prewitt: phony prewitt.exe
+
 build revolve: phony revolve.exe
 
 build shrink: phony shrink.exe
+
+build sobel: phony sobel.exe
 
 build translate: phony translate.exe
 
@@ -465,7 +529,7 @@ build translate: phony translate.exe
 #############################################
 # Folder: E:/myLab/PicProcessLib/cmake-build-debug
 
-build all: phony GrayProcess.exe ReverseProcess.exe RGBDepartureProcess.exe HistogramEqualization.exe MakeHistogram.exe avag.exe mid.exe shrink.exe translate.exe mirror.exe revolve.exe
+build all: phony GrayProcess.exe ReverseProcess.exe RGBDepartureProcess.exe HistogramEqualization.exe MakeHistogram.exe avag.exe mid.exe shrink.exe translate.exe mirror.exe revolve.exe prewitt.exe sobel.exe
 
 # =============================================================================
 # Built-in targets

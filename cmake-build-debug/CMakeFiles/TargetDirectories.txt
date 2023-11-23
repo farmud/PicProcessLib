@@ -9,5 +9,7 @@ E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/shrink.dir
 E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/translate.dir
 E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/mirror.dir
 E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/revolve.dir
+E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/prewitt.dir
+E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/sobel.dir
 E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/edit_cache.dir
 E:/myLab/PicProcessLib/cmake-build-debug/CMakeFiles/rebuild_cache.dir
