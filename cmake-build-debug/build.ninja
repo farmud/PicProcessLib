@@ -469,6 +469,123 @@ build sobel.exe: C_EXECUTABLE_LINKER__sobel_Debug CMakeFiles/sobel.dir/lab7/sobe
   TARGET_IMPLIB = libsobel.dll.a
   TARGET_PDB = sobel.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target T
+
+
+#############################################
+# Order-only phony target for T
+
+build cmake_object_order_depends_target_T: phony || CMakeFiles/T.dir
+
+build CMakeFiles/T.dir/lab5/T.c.obj: C_COMPILER__T_unscanned_Debug E$:/myLab/PicProcessLib/lab5/T.c || cmake_object_order_depends_target_T
+  DEP_FILE = CMakeFiles\T.dir\lab5\T.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\T.dir
+  OBJECT_FILE_DIR = CMakeFiles\T.dir\lab5
+
+build CMakeFiles/T.dir/lab5/tool/tool.c.obj: C_COMPILER__T_unscanned_Debug E$:/myLab/PicProcessLib/lab5/tool/tool.c || cmake_object_order_depends_target_T
+  DEP_FILE = CMakeFiles\T.dir\lab5\tool\tool.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\T.dir
+  OBJECT_FILE_DIR = CMakeFiles\T.dir\lab5\tool
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target T
+
+
+#############################################
+# Link the executable T.exe
+
+build T.exe: C_EXECUTABLE_LINKER__T_Debug CMakeFiles/T.dir/lab5/T.c.obj CMakeFiles/T.dir/lab5/tool/tool.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\T.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = T.exe
+  TARGET_IMPLIB = libT.dll.a
+  TARGET_PDB = T.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target iterate
+
+
+#############################################
+# Order-only phony target for iterate
+
+build cmake_object_order_depends_target_iterate: phony || CMakeFiles/iterate.dir
+
+build CMakeFiles/iterate.dir/lab5/iterate.c.obj: C_COMPILER__iterate_unscanned_Debug E$:/myLab/PicProcessLib/lab5/iterate.c || cmake_object_order_depends_target_iterate
+  DEP_FILE = CMakeFiles\iterate.dir\lab5\iterate.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\iterate.dir
+  OBJECT_FILE_DIR = CMakeFiles\iterate.dir\lab5
+
+build CMakeFiles/iterate.dir/lab5/tool/tool.c.obj: C_COMPILER__iterate_unscanned_Debug E$:/myLab/PicProcessLib/lab5/tool/tool.c || cmake_object_order_depends_target_iterate
+  DEP_FILE = CMakeFiles\iterate.dir\lab5\tool\tool.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\iterate.dir
+  OBJECT_FILE_DIR = CMakeFiles\iterate.dir\lab5\tool
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target iterate
+
+
+#############################################
+# Link the executable iterate.exe
+
+build iterate.exe: C_EXECUTABLE_LINKER__iterate_Debug CMakeFiles/iterate.dir/lab5/iterate.c.obj CMakeFiles/iterate.dir/lab5/tool/tool.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\iterate.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = iterate.exe
+  TARGET_IMPLIB = libiterate.dll.a
+  TARGET_PDB = iterate.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Otsu
+
+
+#############################################
+# Order-only phony target for Otsu
+
+build cmake_object_order_depends_target_Otsu: phony || CMakeFiles/Otsu.dir
+
+build CMakeFiles/Otsu.dir/lab5/Otsu.c.obj: C_COMPILER__Otsu_unscanned_Debug E$:/myLab/PicProcessLib/lab5/Otsu.c || cmake_object_order_depends_target_Otsu
+  DEP_FILE = CMakeFiles\Otsu.dir\lab5\Otsu.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Otsu.dir
+  OBJECT_FILE_DIR = CMakeFiles\Otsu.dir\lab5
+
+build CMakeFiles/Otsu.dir/lab5/tool/tool.c.obj: C_COMPILER__Otsu_unscanned_Debug E$:/myLab/PicProcessLib/lab5/tool/tool.c || cmake_object_order_depends_target_Otsu
+  DEP_FILE = CMakeFiles\Otsu.dir\lab5\tool\tool.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Otsu.dir
+  OBJECT_FILE_DIR = CMakeFiles\Otsu.dir\lab5\tool
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Otsu
+
+
+#############################################
+# Link the executable Otsu.exe
+
+build Otsu.exe: C_EXECUTABLE_LINKER__Otsu_Debug CMakeFiles/Otsu.dir/lab5/Otsu.c.obj CMakeFiles/Otsu.dir/lab5/tool/tool.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Otsu.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Otsu.exe
+  TARGET_IMPLIB = libOtsu.dll.a
+  TARGET_PDB = Otsu.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -501,11 +618,17 @@ build HistogramEqualization: phony HistogramEqualization.exe
 
 build MakeHistogram: phony MakeHistogram.exe
 
+build Otsu: phony Otsu.exe
+
 build RGBDepartureProcess: phony RGBDepartureProcess.exe
 
 build ReverseProcess: phony ReverseProcess.exe
 
+build T: phony T.exe
+
 build avag: phony avag.exe
+
+build iterate: phony iterate.exe
 
 build mid: phony mid.exe
 
@@ -529,7 +652,7 @@ build translate: phony translate.exe
 #############################################
 # Folder: E:/myLab/PicProcessLib/cmake-build-debug
 
-build all: phony GrayProcess.exe ReverseProcess.exe RGBDepartureProcess.exe HistogramEqualization.exe MakeHistogram.exe avag.exe mid.exe shrink.exe translate.exe mirror.exe revolve.exe prewitt.exe sobel.exe
+build all: phony GrayProcess.exe ReverseProcess.exe RGBDepartureProcess.exe HistogramEqualization.exe MakeHistogram.exe avag.exe mid.exe shrink.exe translate.exe mirror.exe revolve.exe prewitt.exe sobel.exe T.exe iterate.exe Otsu.exe
 
 # =============================================================================
 # Built-in targets
