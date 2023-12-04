@@ -3,26 +3,23 @@ project(PicProcessLib)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(GrayProcess lab1/GrayProcess.c)
-add_executable(ReverseProcess lab1/ReverseProcess.c)
-add_executable(RGBDepartureProcess lab1/RGBDepartureProcess.c)
-add_executable(HistogramEqualization lab2/HistogramEqualization.c)
-add_executable(MakeHistogram lab2/MakeHistogram.c)
-add_executable(avag lab3/avag.c
-)
-add_executable(mid lab3/mid.c)
-add_executable(shrink lab4/shrink.c)
-add_executable(translate lab4/translate.c)
-add_executable(mirror lab4/mirror.c)
-add_executable(revolve lab4/revolve.c)
+
+
 add_executable(prewitt lab7/prewitt.c)
 add_executable(sobel lab7/sobel.c)
-add_executable(T lab5/T.c
-        lab5/tool/tool.h
-        lab5/tool/tool.c)
-add_executable(iterate lab5/iterate.c
-        lab5/tool/tool.h
-        lab5/tool/tool.c)
-add_executable(Otsu lab5/Otsu.c
-        lab5/tool/tool.h
-        lab5/tool/tool.c)
+add_executable(main main.c
+        tools/ImagefileHelper.c
+        tools/ImagefileHelper.h
+        lab1/lab1.c
+        lab1/lab1.h
+        lab2/lab2.c
+        lab2/lab2.h
+        lab3/lab3.c
+        lab3/lab3.h
+        lab4/lab4.c
+        lab4/lab4.h
+        lab4/lab4.h
+        lab5/lab5.c
+        lab5/lab5.h
+        lab7/lab7.c
+        lab7/lab7.h)
