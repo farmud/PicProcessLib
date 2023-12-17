@@ -6,7 +6,18 @@
 #include "lab3/lab3.h"
 #include "lab4/lab4.h"
 #include "lab5/lab5.h"
+#include "lab6/lab6.h"
 #include "lab7/lab7.h"
+#include "lab8/lab8.h"
+#include "lab9/lab9.h"
+#include "lab10/lab10.h"
+void menu();
+
+int main() {
+
+   menu();
+
+}
 
 void menu() {
 
@@ -185,15 +196,120 @@ void menu() {
             }
         }
             break;
-        case 6:
+        case 6: {
+            system("cls");
+            printf("1. 基于种子点进行区域增长\n");
+            printf("2. 区域分裂\n");
+            printf("请输入您的选择，输入0返回：\n");
+            int i ;
+            scanf("%d",&i);
+            switch (i) {
+                case 1: {
+                    regional_growth(NULL,NULL);
+                    printf("success!\n");
+                    break;
+                }
+                case 2: {
+                    regionalFragmentation(NULL,NULL);
+                    printf("success!\n");
+                    break;
+                }
+
+                default: {
+                    printf("输入错误，请重新输入！\n");
+                    break;
+                }
+            }
+        }
+
             break;
-        case 7:
+        case 7:{
+            system("cls");
+            printf("1. Prewitt\n");
+            printf("2. Sobel\n");
+            printf("3. LOG\n");
+            printf("请输入您的选择，输入0返回：\n");
+            int i ;
+            scanf("%d",&i);
+            switch (i) {
+                case 1: {
+                    prewitt(NULL,NULL);
+                    printf("success!\n");
+                    break;
+                }
+                case 2: {
+                    sobel(NULL,NULL);
+                    printf("success!\n");
+                    break;
+                }
+                case 3: {
+                    LOG(NULL,NULL);
+                    printf("success!\n");
+                    break;
+                }
+                default: {
+                    printf("输入错误，请重新输入！\n");
+                    break;
+                }
+            }
+        }
             break;
-        case 8:
+        case 8:{
+            system("cls");
+            printf("1. 直线检测\n");
+            printf("请输入您的选择，输入0返回：\n");
+            int i ;
+            scanf("%d",&i);
+            switch (i) {
+                case 1: {
+                    houghTransform(NULL,NULL);
+                    printf("success!\n");
+                    break;
+                }
+                default: {
+                    printf("输入错误，请重新输入！\n");
+                    break;
+                }
+            }
+        }
             break;
-        case 9:
+        case 9:{
+            system("cls");
+            printf("1. 区域标记\n");
+            printf("请输入您的选择，输入0返回：\n");
+            int i ;
+            scanf("%d",&i);
+            switch (i) {
+                case 1: {
+                    regionalMark(NULL,NULL);
+                    printf("success!\n");
+                    break;
+                }
+                default: {
+                    printf("输入错误，请重新输入！\n");
+                    break;
+                }
+            }
+        }
             break;
-        case 10:
+        case 10:{
+            system("cls");
+            printf("1. 轮廓提取\n");
+            printf("请输入您的选择，输入0返回：\n");
+            int i ;
+            scanf("%d",&i);
+            switch (i) {
+                case 1: {
+                    extraction(NULL,NULL);
+                    printf("success!\n");
+                    break;
+                }
+                default: {
+                    printf("输入错误，请重新输入！\n");
+                    break;
+                }
+            }
+        }
             break;
         default:
             printf("输入错误，请重新输入！\n");
@@ -206,9 +322,3 @@ void menu() {
     menu();
 }
 
-
-int main() {
-
-   menu();
-
-}

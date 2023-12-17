@@ -24,10 +24,8 @@ void makeHistogramAndNewImage(char* srcPath, char* imgDstPath,char* histogramDst
 
     int max = 0;            // 存储出现的像素数量的最大值，用于normalization
 
-    int* histogram = (int*)malloc(sizeof(int) * 256);    // 直方图,下标为对应的像素值，值为出现的次数
-    for (int i = 0; i < 256; i++) {
-        histogram[i] = 0;
-    }
+    int histogram[256] = {0};    // 直方图,下标为对应的像素值，值为出现的次数
+
 
     for(int i = 0; i < rowSize * bmp.infoHeader.biHeight; i++) {
 
@@ -117,7 +115,7 @@ void iterate( char* srcPath, char* imgDstPath,char* histogramDstPath) {
     if(imgDstPath == NULL) {
         imgDstPath = "../lab5/img/iterate_newImage.bmp";
     }
-    BMP8bit  bmp = read8Image(srcPath);
+    BMP8bit bmp = read8Image(srcPath);
 
     int rowSize = ((bmp.infoHeader.biWidth * bmp.infoHeader.biBitCount + 31) / 32) * 4;         // 每行像素所占字节数
 

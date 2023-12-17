@@ -1,4 +1,4 @@
-ToolSet: 11.0 w64 (local)@D:\IDEA\toolbox1111\CLion Nova 2\bin\mingw
+ToolSet: 11.0 w64 (local)@D:\IDEA\toolbox1111\CLion\bin\mingw
 Options: 
 
-Options:-DCMAKE_MAKE_PROGRAM=D:/IDEA/toolbox1111/CLion Nova 2/bin/ninja/win/x64/ninja.exe
+Options:-DCMAKE_MAKE_PROGRAM=D:/IDEA/toolbox1111/CLion/bin/ninja/win/x64/ninja.exe

@@ -41,72 +41,6 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = E$:/myLab/PicProcessLib/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target prewitt
-
-
-#############################################
-# Order-only phony target for prewitt
-
-build cmake_object_order_depends_target_prewitt: phony || CMakeFiles/prewitt.dir
-
-build CMakeFiles/prewitt.dir/lab7/prewitt.c.obj: C_COMPILER__prewitt_unscanned_Debug E$:/myLab/PicProcessLib/lab7/prewitt.c || cmake_object_order_depends_target_prewitt
-  DEP_FILE = CMakeFiles\prewitt.dir\lab7\prewitt.c.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\prewitt.dir
-  OBJECT_FILE_DIR = CMakeFiles\prewitt.dir\lab7
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target prewitt
-
-
-#############################################
-# Link the executable prewitt.exe
-
-build prewitt.exe: C_EXECUTABLE_LINKER__prewitt_Debug CMakeFiles/prewitt.dir/lab7/prewitt.c.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\prewitt.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = prewitt.exe
-  TARGET_IMPLIB = libprewitt.dll.a
-  TARGET_PDB = prewitt.exe.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target sobel
-
-
-#############################################
-# Order-only phony target for sobel
-
-build cmake_object_order_depends_target_sobel: phony || CMakeFiles/sobel.dir
-
-build CMakeFiles/sobel.dir/lab7/sobel.c.obj: C_COMPILER__sobel_unscanned_Debug E$:/myLab/PicProcessLib/lab7/sobel.c || cmake_object_order_depends_target_sobel
-  DEP_FILE = CMakeFiles\sobel.dir\lab7\sobel.c.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\sobel.dir
-  OBJECT_FILE_DIR = CMakeFiles\sobel.dir\lab7
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target sobel
-
-
-#############################################
-# Link the executable sobel.exe
-
-build sobel.exe: C_EXECUTABLE_LINKER__sobel_Debug CMakeFiles/sobel.dir/lab7/sobel.c.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\sobel.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = sobel.exe
-  TARGET_IMPLIB = libsobel.dll.a
-  TARGET_PDB = sobel.exe.dbg
-
-# =============================================================================
 # Object build statements for EXECUTABLE target main
 
 
@@ -163,6 +97,30 @@ build CMakeFiles/main.dir/lab7/lab7.c.obj: C_COMPILER__main_unscanned_Debug E$:/
   OBJECT_DIR = CMakeFiles\main.dir
   OBJECT_FILE_DIR = CMakeFiles\main.dir\lab7
 
+build CMakeFiles/main.dir/lab6/lab6.c.obj: C_COMPILER__main_unscanned_Debug E$:/myLab/PicProcessLib/lab6/lab6.c || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles\main.dir\lab6\lab6.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir\lab6
+
+build CMakeFiles/main.dir/lab8/lab8.c.obj: C_COMPILER__main_unscanned_Debug E$:/myLab/PicProcessLib/lab8/lab8.c || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles\main.dir\lab8\lab8.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir\lab8
+
+build CMakeFiles/main.dir/lab9/lab9.c.obj: C_COMPILER__main_unscanned_Debug E$:/myLab/PicProcessLib/lab9/lab9.c || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles\main.dir\lab9\lab9.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir\lab9
+
+build CMakeFiles/main.dir/lab10/lab10.c.obj: C_COMPILER__main_unscanned_Debug E$:/myLab/PicProcessLib/lab10/lab10.c || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles\main.dir\lab10\lab10.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir\lab10
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target main
@@ -171,7 +129,7 @@ build CMakeFiles/main.dir/lab7/lab7.c.obj: C_COMPILER__main_unscanned_Debug E$:/
 #############################################
 # Link the executable main.exe
 
-build main.exe: C_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.c.obj CMakeFiles/main.dir/tools/ImagefileHelper.c.obj CMakeFiles/main.dir/lab1/lab1.c.obj CMakeFiles/main.dir/lab2/lab2.c.obj CMakeFiles/main.dir/lab3/lab3.c.obj CMakeFiles/main.dir/lab4/lab4.c.obj CMakeFiles/main.dir/lab5/lab5.c.obj CMakeFiles/main.dir/lab7/lab7.c.obj
+build main.exe: C_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.c.obj CMakeFiles/main.dir/tools/ImagefileHelper.c.obj CMakeFiles/main.dir/lab1/lab1.c.obj CMakeFiles/main.dir/lab2/lab2.c.obj CMakeFiles/main.dir/lab3/lab3.c.obj CMakeFiles/main.dir/lab4/lab4.c.obj CMakeFiles/main.dir/lab5/lab5.c.obj CMakeFiles/main.dir/lab7/lab7.c.obj CMakeFiles/main.dir/lab6/lab6.c.obj CMakeFiles/main.dir/lab8/lab8.c.obj CMakeFiles/main.dir/lab9/lab9.c.obj CMakeFiles/main.dir/lab10/lab10.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\main.dir
@@ -186,7 +144,7 @@ build main.exe: C_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.c.obj C
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\myLab\PicProcessLib\cmake-build-debug && "D:\IDEA\toolbox1111\CLion Nova 2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D E:\myLab\PicProcessLib\cmake-build-debug && D:\IDEA\toolbox1111\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -197,7 +155,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\myLab\PicProcessLib\cmake-build-debug && "D:\IDEA\toolbox1111\CLion Nova 2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SE:\myLab\PicProcessLib -BE:\myLab\PicProcessLib\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D E:\myLab\PicProcessLib\cmake-build-debug && D:\IDEA\toolbox1111\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SE:\myLab\PicProcessLib -BE:\myLab\PicProcessLib\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -209,10 +167,6 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build main: phony main.exe
 
-build prewitt: phony prewitt.exe
-
-build sobel: phony sobel.exe
-
 # =============================================================================
 # Folder targets.
 
@@ -221,7 +175,7 @@ build sobel: phony sobel.exe
 #############################################
 # Folder: E:/myLab/PicProcessLib/cmake-build-debug
 
-build all: phony prewitt.exe sobel.exe main.exe
+build all: phony main.exe
 
 # =============================================================================
 # Built-in targets
@@ -230,14 +184,14 @@ build all: phony prewitt.exe sobel.exe main.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeRCCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake E$:/myLab/PicProcessLib/CMakeLists.txt
+build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeRCCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake E$:/myLab/PicProcessLib/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeRCCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake D$:/IDEA/toolbox1111/CLion$ Nova$ 2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake E$:/myLab/PicProcessLib/CMakeLists.txt: phony
+build CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeRCCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake D$:/IDEA/toolbox1111/CLion/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake E$:/myLab/PicProcessLib/CMakeLists.txt: phony
 
 
 #############################################

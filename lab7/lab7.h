@@ -7,3 +7,5 @@
 void prewitt(char* srcPath, char* dstPath);
 
 void sobel(char * srcPath, char * dstPath);
+
+void LOG(char * srcPath, char * dstPath);
