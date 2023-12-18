@@ -1,4 +1,4 @@
-# Install script for directory: E:/myLab/PicProcessLib
+# Install script for directory: D:/课程相关/数字图像处理/PicProcessLib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/myLab/PicProcessLib/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/课程相关/数字图像处理/PicProcessLib/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -33,6 +33,7 @@ void regionalMark(char *srcPath, char *dstPath)
     {
         for (int j = 0; j < rowSize; j++)
         {
+            // 如果是黑色像素且未被访问过
             if (bmp.imageData[i * rowSize + j] == 0 && visited[i * rowSize + j] == 0)
             {
                 // 使用迭代版本进行标记，深度优先搜索

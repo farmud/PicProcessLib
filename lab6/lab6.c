@@ -213,6 +213,7 @@ void devide(int **imageData,unsigned char *initialData, int lefttopX ,int leftto
     // 绘图，画出区域内四等分的线
     int midX = (lefttopX + rightbottomX) / 2;
     int midY = (lefttopY + rightbottomY) / 2;
+
     for(int i = lefttopX;i < rightbottomX;i++){
         initialData[lefttopY * row + i] = 0;
         initialData[rightbottomY * row + i] = 0;

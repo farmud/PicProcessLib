@@ -33,6 +33,7 @@ void menu() {
     printf("==============8. Hough变换=======================\n");
     printf("==============9. 区域标记========================\n");
     printf("==============10. 轮廓提取=======================\n");
+    printf("==============11. 自动运行所有函数===============\n");
     printf("=================================================\n");
     printf("=================================================\n");
     printf("请输入您的选择，输入0终止：\n");
@@ -58,17 +59,17 @@ void menu() {
                 }
                 case 1: {
                     grayProcess(NULL,NULL);
-                    printf("success!\n");
+                    printf("1.1success!\n");
                     break;
                 }
                 case 2: {
                     reverseProcess(NULL,NULL);
-                    printf("success!\n");
+                    printf("1.2success!\n");
                     break;
                 }
                 case 3: {
                     depatureRGB(NULL,NULL,NULL,NULL);
-                    printf("success!\n");
+                    printf("1.3success!\n");
                     break;
                 }
                 default: {
@@ -88,12 +89,13 @@ void menu() {
             switch (i) {
                 case 1: {
                     makeHistogram(NULL,NULL);
-                    printf("success!\n");
+                    printf("2.1success!\n");
                     break;
                 }
                 case 2: {
                     histogramEqualization(NULL,NULL);
-                    printf("success!\n");
+                    makeHistogram("../lab2/img/Equalization.bmp","../lab2/img/EqualizationHistogram.bmp");
+                    printf("2.2success!\n");
                     break;
                 }
                 default: {
@@ -113,12 +115,12 @@ void menu() {
             switch (i) {
                 case 1: {
                     avag(NULL,NULL);
-                    printf("success!\n");
+                    printf("3.1success!\n");
                     break;
                 }
                 case 2: {
                     mid(NULL,NULL);
-                    printf("success!\n");
+                    printf("3.2success!\n");
                     break;
                 }
                 default: {
@@ -140,22 +142,22 @@ void menu() {
             switch (i) {
                 case 1: {
                     shrink(NULL,NULL);
-                    printf("success!\n");
+                    printf("4.1success!\n");
                     break;
                 }
                 case 2: {
                     translate(NULL,NULL);
-                    printf("success!\n");
+                    printf("4.2success!\n");
                     break;
                 }
                 case 3: {
                     mirror(NULL,NULL,NULL);
-                    printf("success!\n");
+                    printf("4.3success!\n");
                     break;
                 }
                 case 4: {
                     revolve(NULL,NULL);
-                    printf("success!\n");
+                    printf("4.4success!\n");
                     break;
                 }
                 default: {
@@ -175,18 +177,18 @@ void menu() {
             scanf("%d",&i);
             switch (i) {
                 case 1: {
-                    makeHistogramAndNewImage(NULL,NULL,NULL,100 );
-                    printf("success!\n");
+                    makeHistogramAndNewImage(NULL,NULL,NULL,125 );
+                    printf("5.1success!\n");
                     break;
                 }
                 case 2: {
                     iterate(NULL,NULL,NULL);
-                    printf("success!\n");
+                    printf("5.2success!\n");
                     break;
                 }
                 case 3: {
                     Otsu(NULL,NULL,NULL);
-                    printf("success!\n");
+                    printf("5.3success!\n");
                     break;
                 }
                 default: {
@@ -206,12 +208,12 @@ void menu() {
             switch (i) {
                 case 1: {
                     regional_growth(NULL,NULL);
-                    printf("success!\n");
+                    printf("6.1success!\n");
                     break;
                 }
                 case 2: {
                     regionalFragmentation(NULL,NULL);
-                    printf("success!\n");
+                    printf("6.2success!\n");
                     break;
                 }
 
@@ -234,17 +236,17 @@ void menu() {
             switch (i) {
                 case 1: {
                     prewitt(NULL,NULL);
-                    printf("success!\n");
+                    printf("7.1success!\n");
                     break;
                 }
                 case 2: {
                     sobel(NULL,NULL);
-                    printf("success!\n");
+                    printf("7.2success!\n");
                     break;
                 }
                 case 3: {
                     LOG(NULL,NULL);
-                    printf("success!\n");
+                    printf("7.3success!\n");
                     break;
                 }
                 default: {
@@ -263,7 +265,7 @@ void menu() {
             switch (i) {
                 case 1: {
                     houghTransform(NULL,NULL);
-                    printf("success!\n");
+                    printf("8.1success!\n");
                     break;
                 }
                 default: {
@@ -282,7 +284,7 @@ void menu() {
             switch (i) {
                 case 1: {
                     regionalMark(NULL,NULL);
-                    printf("success!\n");
+                    printf("9.1success!\n");
                     break;
                 }
                 default: {
@@ -301,7 +303,7 @@ void menu() {
             switch (i) {
                 case 1: {
                     extraction(NULL,NULL);
-                    printf("success!\n");
+                    printf("10.1success!\n");
                     break;
                 }
                 default: {
@@ -309,6 +311,58 @@ void menu() {
                     break;
                 }
             }
+        }
+        break;
+        case 11:{
+            system("cls");
+            printf("下面以默认参数运行所有图像处理函数：\n");
+            grayProcess(NULL,NULL);
+            printf("1.1success!\n");
+            reverseProcess(NULL,NULL);
+            printf("1.2success!\n");
+            depatureRGB(NULL,NULL,NULL,NULL);
+            printf("1.3success!\n");
+            makeHistogram(NULL,NULL);
+            printf("2.1success!\n");
+            histogramEqualization(NULL,NULL);
+            printf("2.2success!\n");
+            avag(NULL,NULL);
+            printf("3.1success!\n");
+            mid(NULL,NULL);
+            printf("3.2success!\n");
+            shrink(NULL,NULL);
+            printf("4.1success!\n");
+            translate(NULL,NULL);
+            printf("4.2success!\n");
+            mirror(NULL,NULL,NULL);
+            printf("4.3success!\n");
+            revolve(NULL,NULL);
+            printf("4.4success!\n");
+            makeHistogramAndNewImage(NULL,NULL,NULL,100 );
+            printf("5.1success!\n");
+            iterate(NULL,NULL,NULL);
+            printf("5.2success!\n");
+            Otsu(NULL,NULL,NULL);
+            printf("5.3success!\n");
+            regional_growth(NULL,NULL);
+            printf("6.1success!\n");
+            regionalFragmentation(NULL,NULL);
+            printf("6.2success!\n");
+            prewitt(NULL,NULL);
+            printf("7.1success!\n");
+            sobel(NULL,NULL);
+            printf("7.2success!\n");
+            LOG(NULL,NULL);
+            printf("7.3success!\n");
+            houghTransform(NULL,NULL);
+            printf("8.1success!\n");
+            regionalMark(NULL,NULL);
+            printf("9.1success!\n");
+            extraction(NULL,NULL);
+            printf("10.1success!\n");
+            printf("批处理完成!\n");
+
+
         }
             break;
         default:
